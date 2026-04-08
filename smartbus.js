@@ -5,7 +5,8 @@ module.exports = function(RED) {
         RED.nodes.createNode(this, config);
         const node = this;
 
-        const bus = new SmartBus();
+        // Use decoder-only mode
+        const decoder = new SmartBus.Decoder();
 
         node.on("input", function(msg) {
             try {
@@ -14,7 +15,7 @@ module.exports = function(RED) {
                     return;
                 }
 
-                const decoded = bus.decode(msg.payload);
+                const decoded = decoder.decode(msg.payload);
 
                 msg.decoded = decoded;
                 msg.payload = decoded;
