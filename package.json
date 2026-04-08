@@ -1,13 +1,18 @@
 {
   "name": "node-red-contrib-smartbus",
   "version": "1.0.0",
-  "description": "HDL BusPro decoder node using smart-bus library",
+  "description": "HDL BusPro nodes using the smart-bus library",
+  "author": "Mihai Burada",
+  "license": "MIT",
   "dependencies": {
-    "smart-bus": "^0.9.0"
+    "smart-bus": "github:mihaiburada/smart-bus"
   },
   "node-red": {
     "nodes": {
-      "smartbus": "smartbus.js"
+      "smartbus": "smartbus.js",
+      "smartbus-encoder": "smartbus-encoder.js",
+      "smartbus-router": "smartbus-router.js",
+      "smartbus-ha-discovery": "smartbus-ha-discovery.js"
     }
   }
 }

@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    RED.nodes.registerType('smartbus-encoder', {
+        category: 'function',
+        color: '#c0deed',
+        defaults: {
+            name: { value: "" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "bridge.svg",
+        label: function() {
+            return this.name || "SmartBus Encoder";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="smartbus-encoder">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="SmartBus Encoder">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="smartbus-encoder">
+    <p>Encodes high-level HDL commands into raw frames using the smart-bus library.</p>
+    <p>Input: <code>msg.command</code> must be an object describing the command.</p>
+    <p>Output: <code>msg.payload</code> is a Buffer containing the encoded frame.</p>
+</script>

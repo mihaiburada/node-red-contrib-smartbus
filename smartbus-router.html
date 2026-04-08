@@ -1,0 +1,35 @@
+<script type="text/javascript">
+    RED.nodes.registerType('smartbus-router', {
+        category: 'function',
+        color: '#c0deed',
+        defaults: {
+            name: { value: "" }
+        },
+        inputs: 1,
+        outputs: 4,
+        icon: "bridge.svg",
+        label: function() {
+            return this.name || "SmartBus Router";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="smartbus-router">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="SmartBus Router">
+    </div>
+    <div class="form-tips">
+        <p>Outputs:</p>
+        <ol>
+            <li>Lighting</li>
+            <li>Curtains/Blinds</li>
+            <li>HVAC</li>
+            <li>Other</li>
+        </ol>
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="smartbus-router">
+    <p>Routes decoded SmartBus messages to different outputs based on command type.</p>
+</script>

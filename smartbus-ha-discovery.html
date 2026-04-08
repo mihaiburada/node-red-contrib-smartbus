@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    RED.nodes.registerType('smartbus-ha-discovery', {
+        category: 'function',
+        color: '#c0deed',
+        defaults: {
+            name: { value: "" },
+            prefix: { value: "homeassistant" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "bridge.svg",
+        label: function() {
+            return this.name || "SmartBus HA Discovery";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="smartbus-ha-discovery">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="SmartBus HA Discovery">
+    </div>
+    <div class="form-row">
+        <label for="node-input-prefix"><i class="fa fa-tag"></i> Prefix</label>
+        <input type="text" id="node-input-prefix" placeholder="homeassistant">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="smartbus-ha-discovery">
+    <p>Generates Home Assistant MQTT Discovery configs from decoded SmartBus messages.</p>
+    <p>Default prefix: <code>homeassistant</code>.</p>
+</script>
