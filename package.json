@@ -1,0 +1,13 @@
+{
+  "name": "node-red-contrib-smartbus",
+  "version": "1.0.0",
+  "description": "HDL BusPro decoder node using smart-bus library",
+  "dependencies": {
+    "smart-bus": "^0.9.0"
+  },
+  "node-red": {
+    "nodes": {
+      "smartbus": "smartbus.js"
+    }
+  }
+}
