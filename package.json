@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-smartbus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HDL BusPro nodes using the smart-bus library",
   "author": "Mihai Burada",
   "license": "MIT",
