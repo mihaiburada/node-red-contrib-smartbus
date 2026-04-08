@@ -1,0 +1,28 @@
+<script type="text/javascript">
+    RED.nodes.registerType('smartbus', {
+        category: 'function',
+        color: '#c0deed',
+        defaults: {
+            name: { value: "" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "bridge.svg",
+        label: function() {
+            return this.name || "SmartBus Decoder";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="smartbus">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="SmartBus Decoder">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="smartbus">
+    <p>Decodes HDL BusPro raw frames using the smart-bus library.</p>
+    <p>Input: <code>msg.payload</code> must be a Buffer.</p>
+    <p>Output: <code>msg.payload</code> contains decoded JSON.</p>
+</script>
